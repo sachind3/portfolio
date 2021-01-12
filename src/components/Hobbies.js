@@ -3,7 +3,7 @@ const Hobbies = (hobbies) => {
     return (<div className="card">
         <div className="card-title">Hobbies</div>
         <ul className="card-body hobbies">
-            {hobbies.hobbies[0].hobbies.map((hobbies, index) => {
+            {hobbies.hobbies.map((hobbies, index) => {
                 const { name, image, detail } = hobbies;
                 return (<li key={index}>
                     <img src={image} alt={name} />

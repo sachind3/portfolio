@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UserInfo = (userInfo) => {
-    const { name, image, designation, detail, social } = userInfo.userInfo[0].userInfo;
+    const { name, image, designation, detail, social } = userInfo.userInfo;
     return (<div className="card userInfo">
         <div className="userImage">
             <img src={image} alt={name} />
