@@ -1,26 +1,10 @@
 import React, { useState } from 'react'
-import Pagination from "react-js-pagination";
+
 const Projects = ({ projects }) => {
 
     console.log(projects.length);
     // current page
-    const [currentPage, setCurrentPage] = useState(1);
 
-    // total records per page to display
-    const recordPerPage = 3;
-
-    // total number of the records
-    const totalRecords = projects.length;
-
-    // range of pages in paginator
-    const pageRange = 3;
-
-    // handle change event
-    const handlePageChange = pageNumber => {
-        setCurrentPage(pageNumber);
-
-        // call API to get data based on pageNumber
-    }
     return (<div className="project-grid">
         {
             projects.map((project) => {
@@ -45,15 +29,7 @@ const Projects = ({ projects }) => {
                 )
             })
         }
-        <Pagination
-            itemClass="page-item" // add it for bootstrap 4
-            linkClass="page-link" // add it for bootstrap 4
-            activePage={currentPage}
-            itemsCountPerPage={recordPerPage}
-            totalItemsCount={totalRecords}
-            pageRangeDisplayed={pageRange}
-            onChange={handlePageChange}
-        />
+
     </div>)
 }
 export default Projects
