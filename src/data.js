@@ -73,14 +73,14 @@ export const blog = {
 };
 export const experiences = [
   {
-    image: "https://picsum.photos/120/80",
+    image: "./assets/developer.png",
     date: "Feb 2017 - Current",
     designation: "Front-end developer",
     detail:
       "Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.",
   },
   {
-    image: "https://picsum.photos/120/80",
+    image: "./assets/developer.png",
     date: "Aug 2016 - Feb 2018",
     designation: "Full-stack developer",
     detail:

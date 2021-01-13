@@ -26,6 +26,7 @@ function App() {
       (project) => project.category === category
     );
     setProjectList(newProjects);
+    setCategories(allCategories);
   };
   return (
     <div className="App">
