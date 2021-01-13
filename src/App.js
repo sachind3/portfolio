@@ -1,27 +1,32 @@
-import React, { useState } from 'react'
-import { userInfo, skills, hobbies, blog, experiences, projects } from './data'
-import UserInfo from './components/UserInfo'
-import Skills from './components/Skills'
-import Hobbies from './components/Hobbies'
-import Blog from './components/Blog'
-import Experiences from './components/Experiences'
-import ProjectCategory from './components/ProjectCategory'
-import Projects from './components/Projects'
+import React, { useState } from "react";
+import { userInfo, skills, hobbies, blog, experiences, projects } from "./data";
+import UserInfo from "./components/UserInfo";
+import Skills from "./components/Skills";
+import Hobbies from "./components/Hobbies";
+import Blog from "./components/Blog";
+import Experiences from "./components/Experiences";
+import ProjectCategory from "./components/ProjectCategory";
+import Projects from "./components/Projects";
 
-const allCategories = ['all', ...new Set(projects.map((project) => project.category))]
+const allCategories = [
+  "all",
+  ...new Set(projects.map((project) => project.category)),
+];
 
 function App() {
-  const [projectList, setProjectList] = useState(projects)
-  const [categories, setCategories] = useState(allCategories)
+  const [projectList, setProjectList] = useState(projects);
+  const [categories, setCategories] = useState(allCategories);
 
   const filterProjects = (category) => {
-    if (category == 'all') {
+    if (category === "all") {
       setProjectList(projects);
-      return
+      return;
     }
-    const newProjects = projects.filter((project) => project.category === category);
-    setProjectList(newProjects)
-  }
+    const newProjects = projects.filter(
+      (project) => project.category === category
+    );
+    setProjectList(newProjects);
+  };
   return (
     <div className="App">
       <main>
@@ -37,7 +42,10 @@ function App() {
               <Experiences experiences={experiences} />
             </div>
           </div>
-          <ProjectCategory categories={categories} filterProjects={filterProjects} />
+          <ProjectCategory
+            categories={categories}
+            filterProjects={filterProjects}
+          />
           <Projects projects={projectList} />
         </div>
       </main>
