@@ -17,16 +17,7 @@ const Projects = ({ projects }) => {
 
   const renderProjects = currentProjects.map((project, index) => {
     // return <li key={index}>{project.title}</li>;
-    const {
-      id,
-      title,
-      image,
-      tags,
-      category,
-      detail,
-      demoLink,
-      gitLink,
-    } = project;
+    const { id, title, image, tags, detail } = project;
     return (
       <div key={id} className="card">
         <img src={image} alt={title} />
